@@ -1,12 +1,12 @@
 ﻿using GraphQLPractice.Data;
-using GraphQLPractice.Extensions;
+using GraphQLPractice.GraphQL.Extensions;
 using HotChocolate.Types;
 using HotChocolate.Types.Descriptors;
 using System.Reflection;
 
-namespace GraphQLPractice.Attributes
+namespace GraphQLPractice.GraphQL.Attributes
 {
-    public class MyDbContextAttribute : ObjectFieldDescriptorAttribute
+    public class UseAppDbContextAttribute : ObjectFieldDescriptorAttribute
     {
         public override void OnConfigure(IDescriptorContext context, IObjectFieldDescriptor descriptor, MemberInfo member)
         {

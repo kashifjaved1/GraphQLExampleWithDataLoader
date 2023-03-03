@@ -8,7 +8,7 @@ using HotChocolate;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace GraphQLPractice.Schema
+namespace GraphQLPractice.GraphQL.Schema
 {
     public class Mutation
     {

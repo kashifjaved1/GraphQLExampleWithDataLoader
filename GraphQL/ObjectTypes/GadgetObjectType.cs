@@ -3,7 +3,7 @@ using GraphQLPractice.Models;
 using HotChocolate.Types;
 using System;
 
-namespace GraphQLPractice.ObjectTypes
+namespace GraphQLPractice.GraphQL.ObjectTypes
 {
     public class GadgetObjectType : ObjectType<Gadget>
     {

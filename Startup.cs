@@ -1,7 +1,7 @@
 using GraphQLPractice.Configurations;
 using GraphQLPractice.Data;
-using GraphQLPractice.DataLoaders;
-using GraphQLPractice.ObjectTypes;
+using GraphQLPractice.GraphQL.DataLoaders;
+using GraphQLPractice.GraphQL.ObjectTypes;
 using GraphQLPractice.UOW;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

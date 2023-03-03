@@ -1,7 +1,7 @@
 ﻿using GraphQLPractice.Models.Inputs;
 using HotChocolate.Types;
 
-namespace GraphQLPractice.ObjectTypes
+namespace GraphQLPractice.GraphQL.ObjectTypes
 {
     public class GadgetInputObjectType : InputObjectType<GadgetInput>
     {

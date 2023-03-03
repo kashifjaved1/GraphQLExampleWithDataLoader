@@ -1,10 +1,10 @@
 ﻿using GraphQLPractice.Data.Entities;
-using GraphQLPractice.Schema;
+using GraphQLPractice.GraphQL.Schema;
 using HotChocolate.Types;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GraphQLPractice.ObjectTypes
+namespace GraphQLPractice.GraphQL.ObjectTypes
 {
     public class QueryObjectType : ObjectType<Query>
     {

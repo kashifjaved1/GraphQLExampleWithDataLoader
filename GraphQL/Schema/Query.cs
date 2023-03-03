@@ -1,7 +1,7 @@
 ﻿using GraphQLPractice.Attributes;
 using GraphQLPractice.Data;
 using GraphQLPractice.Data.Entities;
-using GraphQLPractice.DataLoaders;
+using GraphQLPractice.GraphQL.DataLoaders;
 using HotChocolate;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace GraphQLPractice.Schema
+namespace GraphQLPractice.GraphQL.Schema
 {
     public class Query
     {
@@ -37,7 +37,7 @@ namespace GraphQLPractice.Schema
         public async Task<Gadget> GetGadgetById(int id, [Service] AppDbContext context)
         {
             var gadget = await context.Gadgets.FirstOrDefaultAsync(x => x.Id == id);
-            if(gadget != null) return gadget;
+            if (gadget != null) return gadget;
             return null;
         }
 
@@ -48,7 +48,7 @@ namespace GraphQLPractice.Schema
             if (gadget != null) return gadget;
             return null;
         }
-        public async Task<List<Gadget>> GetGadgetsByBrandLoader(string brand, 
+        public async Task<List<Gadget>> GetGadgetsByBrandLoader(string brand,
             FilterGadgetsByBrandDataLoader loader,
             CancellationToken cancellationToken
         )

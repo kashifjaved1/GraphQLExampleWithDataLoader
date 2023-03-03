@@ -1,7 +1,7 @@
-﻿using GraphQLPractice.Schema;
+﻿using GraphQLPractice.GraphQL.Schema;
 using HotChocolate.Types;
 
-namespace GraphQLPractice.ObjectTypes
+namespace GraphQLPractice.GraphQL.ObjectTypes
 {
     public class MutationObjectType : ObjectType<Mutation>
     {

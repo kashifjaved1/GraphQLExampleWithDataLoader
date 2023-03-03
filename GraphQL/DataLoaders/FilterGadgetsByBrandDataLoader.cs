@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace GraphQLPractice.DataLoaders
+namespace GraphQLPractice.GraphQL.DataLoaders
 {
     public class FilterGadgetsByBrandDataLoader : BatchDataLoader<string, List<Gadget>>
     {
@@ -19,12 +19,12 @@ namespace GraphQLPractice.DataLoaders
             _dbContextFactory = dbContextFactory;
         }
 
-        protected override async Task<IReadOnlyDictionary<string, List<Gadget>>> 
+        protected override async Task<IReadOnlyDictionary<string, List<Gadget>>>
             LoadBatchAsync(IReadOnlyList<string> keys, CancellationToken cancellationToken)
         {
             await using (var dbContext = _dbContextFactory.CreateDbContext())
             {
-                var gadgets = await dbContext.Gadgets.
+                var gadgets = await dbContext.Gadgets
                     .Where(a => keys.Select(b => b.ToLower()).ToList().Contains(a.Brand.ToLower()))
                     .ToListAsync();
                 return gadgets.GroupBy(a => a.Brand).Select(b => new // a => a.Brand.ToList()
